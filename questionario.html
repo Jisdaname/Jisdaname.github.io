@@ -9,16 +9,17 @@
             font-family: Arial, sans-serif;
             background-image: url('img1.jpg');
             background-color: #f0f0f0;
-            background-size: 150%;
+            background-size: cover; /* Modifica per adattare l'immagine di sfondo */
             background-position: center;
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Impedisci lo scorrimento orizzontale su dispositivi mobili */
         }
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 100%; /* Modifica per adattare la larghezza al dispositivo */
+            margin: 0 auto; /* Centra il contenitore */
             padding: 20px;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.1); /* Trasparenza per leggere meglio il testo sullo sfondo */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -28,6 +29,9 @@
             border: none;
         }
         @media (max-width: 768px) {
+            body {
+                background-size: auto; /* Modifica per adattare l'immagine di sfondo su dispositivi mobili */
+            }
             .container {
                 padding: 10px;
             }
@@ -39,5 +43,6 @@
     <div class="container">
         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScqFYJVlXQ9I5pv4BIE0iwqrtHSnjTRX0VeOEFAVW6rGt7lqw/viewform?embedded=true"></iframe>
     </div>
+
 </body>
 </html>
